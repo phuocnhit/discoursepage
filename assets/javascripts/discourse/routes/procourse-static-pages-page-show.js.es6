@@ -19,7 +19,8 @@ export default DiscourseRoute.extend({
   },
 
   afterModel: function(result) {
-    var newURL = `/page/${result.slug}/${result.id}?a=sdfe`;
+    var txt = rand(36**8).to_s(36);
+    var newURL = `/page/${result.slug}/${result.id}?a=${txt}`;
     DiscourseURL.routeTo(newURL, { replaceURL: true });
   }
 });
