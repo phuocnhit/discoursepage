@@ -2,6 +2,7 @@ import Page from '../models/page-show';
 import DiscourseURL from 'discourse/lib/url';
 import DiscourseRoute from "discourse/routes/discourse";
 
+
 export default DiscourseRoute.extend({
   model(opts) {
     return Page.findById(opts);
@@ -19,8 +20,16 @@ export default DiscourseRoute.extend({
   },
 
   afterModel: function(result) {
-    var txt = rand(36**8).to_s(36);
-    var newURL = `/page/${result.slug}/${result.id}?a=${txt}`;
+    
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < 8; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+
+    var newURL = `/page/${result.slug}/${result.id}?a=${result}`;
     DiscourseURL.routeTo(newURL, { replaceURL: true });
   }
 });
