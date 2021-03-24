@@ -27,9 +27,11 @@ export default DiscourseRoute.extend({
     // for ( var i = 0; i < 8; i++ ) {
     //    result += characters.charAt(Math.floor(Math.random() * charactersLength));
     // }
+    // Math.floor(Math.random() * 100000000)
+    var t = JSON.stringify(result);
 
 
-    var newURL = `/page/${result.slug}/${result.id}/a/?a=${Math.floor(Math.random() * 100000000)}`;
-    DiscourseURL.routeTo(newURL, { replaceURL: false });
+    var newURL = `/page/${result.slug}/${result.id}/a/?a=${t}`;
+    DiscourseURL.routeTo(newURL, { replaceURL: true });
   }
 });
