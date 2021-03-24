@@ -19,7 +19,7 @@ export default DiscourseRoute.extend({
   },
 
   afterModel: function(result) {
-    var newURL = `/page/${result.slug}/${result.id}/ag`;
+    var newURL = `/page/${result.slug}/${result.id}?a=sdfe`;
     DiscourseURL.routeTo(newURL, { replaceURL: true });
   }
 });
