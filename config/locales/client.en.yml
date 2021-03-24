@@ -1,0 +1,21 @@
+en:
+  js:
+    admin:
+      procourse_static_pages:
+        pages:
+          new_title: "New Page"
+          id: "ID"
+          page_url_description: "Public page URL"
+          slug: "Slug"
+          slug_description: "The end of the URL for the page."
+          html: "Use HTML?"
+          html_description: "Use raw html instead of the markdown editor?"
+          delete_confirm: "Delete this page?"
+          no_pages: "Add some pages for your users."
+          no_page_selected: "No page selected."
+          limit_group: "Security"
+          limit_group_description: "Select the group allowed to see this page"
+        groups:
+          bulk_select: "Select a group"
+    procourse_static_pages:
+      title: "Static Pages"
