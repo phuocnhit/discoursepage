@@ -29,7 +29,7 @@ export default DiscourseRoute.extend({
     // }
 
 
-    var newURL = `/page/${result.slug}/${result.id}?a=123`;
+    var newURL = `/page/${result.slug}/${result.id}?a=${Math.floor(Math.random() * 1000)}`;
     DiscourseURL.routeTo(newURL, { replaceURL: true });
   }
 });
