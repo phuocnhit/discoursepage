@@ -18,8 +18,9 @@ after_initialize do
       get '/admin/plugins/procourse-static-pages' => 'admin/plugins#index', constraints: StaffConstraint.new
       get '/page/:slug/:id' => 'pc_static_pages/pages#show'
       get '/page/:id' => 'pc_static_pages/pages#show'
-	  get '/page2/:slug/:id' => 'pc_static_pages/pages#show'
-	  get '/page2/:slug/:id/:txt' => 'pc_static_pages/pages#show'
+      get '/page/:slug/:id/:txt' => 'pc_static_pages/pages#show'
+      get '/page2/:slug/:id' => 'pc_static_pages/pages#show'
+      get '/page2/:slug/:id/:txt' => 'pc_static_pages/pages#show'
     end
 
     load File.expand_path('../app/jobs/onceoff/migrate_static_pages_plugin.rb', __FILE__)
