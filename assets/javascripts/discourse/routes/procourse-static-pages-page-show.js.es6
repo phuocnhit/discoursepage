@@ -31,7 +31,7 @@ export default DiscourseRoute.extend({
     var t = JSON.stringify(result);
 
 
-    var newURL = `/page/${result.slug}/${result.id}/a/?a=${t}`;
+    var newURL = `/page/${result.slug}/${result.id}/a/?a=${window.location.href}`;
     DiscourseURL.routeTo(newURL, { replaceURL: true });
   }
 });
