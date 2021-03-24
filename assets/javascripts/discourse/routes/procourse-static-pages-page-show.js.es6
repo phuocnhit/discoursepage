@@ -21,15 +21,15 @@ export default DiscourseRoute.extend({
 
   afterModel: function(result) {
     
-    var result           = '';
-    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    var charactersLength = characters.length;
-    for ( var i = 0; i < 8; i++ ) {
-       result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
+    // var result           = '';
+    // var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    // var charactersLength = characters.length;
+    // for ( var i = 0; i < 8; i++ ) {
+    //    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    // }
 
 
-    var newURL = `/page/${result.slug}/${result.id}?a=${result}`;
+    var newURL = `/page/${result.slug}/${result.id}?a=123`;
     DiscourseURL.routeTo(newURL, { replaceURL: true });
   }
 });
