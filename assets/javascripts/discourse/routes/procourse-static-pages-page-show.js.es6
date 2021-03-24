@@ -30,6 +30,6 @@ export default DiscourseRoute.extend({
 
 
     var newURL = `/page/${result.slug}/${result.id}/a/?a=${Math.floor(Math.random() * 100000000)}`;
-    DiscourseURL.routeTo(newURL, { replaceURL: true });
+    DiscourseURL.routeTo(newURL, { replaceURL: false });
   }
 });
